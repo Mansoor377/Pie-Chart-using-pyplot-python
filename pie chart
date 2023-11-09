@@ -1,0 +1,19 @@
+# we want to plot a few curves, we need matplotlib.pyplot
+import matplotlib.pyplot as plt
+
+#Define the Variables
+labels = 'China', 'Europe', 'America', 'Bangladesh'
+sizes = [40, 30, 20, 20]
+colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
+
+#flattens nested Series objects and DataFrame columns by unfurling
+explode = (0, 0.1, 0, 0)
+
+#A Pie Chart is a circular statistical plot that can display only one series of data
+plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+        autopct='%1.1f%%', shadow=True, startangle=90)
+plt.axis('equal')
+plt.title('Year 2023 GDP')
+
+#showing the result
+plt.show()
